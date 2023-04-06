@@ -18,10 +18,10 @@ def process_message():
 
     prompt = f'{template}\n{template}\n问题为:\n{prompt}\n回答:'
 
-    response = openai.ChatCompletion.create(
-        model='gpt-3.5-turbo', 
-        messages=[{"role": "user", "content":prompt}])['choices'][0]['message']['content']
-    return jsonify({"response": response})
+    #response = openai.ChatCompletion.create(
+    #    model='gpt-3.5-turbo', 
+    #    messages=[{"role": "user", "content":prompt}])['choices'][0]['message']['content']
+    return jsonify({"response": prompt})
 
 if __name__ == '__main__':
     app.run()

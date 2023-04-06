@@ -16,7 +16,7 @@ def home():
 def process_message():
     prompt = request.json['message']
 
-    prompt = f'{template}\n{template}\n问题为:\n{prompt}\n回答:'
+    prompt = f'{template}\n{jargon}\n问题为:\n{prompt}\n回答:'
 
     #response = openai.ChatCompletion.create(
     #    model='gpt-3.5-turbo', 
